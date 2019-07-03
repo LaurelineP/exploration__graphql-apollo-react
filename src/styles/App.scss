@@ -1,0 +1,64 @@
+$text : #EEE;
+* {
+  margin: 0;
+  list-style: none;
+}
+
+.App {
+  text-align: center;
+  padding: 40px;
+
+  button {
+    outline: none;
+    color: $text;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 1em;
+    background-color: #456;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+  }
+}
+
+
+/* CURRENCY */
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #456;
+  height: 100px;
+
+  li {
+    color: $text;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: "red";
+
+  }
+
+  .menu {
+    text-transform: uppercase;
+  }
+
+  .active {
+    text-decoration: underline;
+    &:before {
+      position: absolute;
+      content: ">";
+      margin: 0 -30px;
+      padding: 0 10px;
+    }
+  }
+}
+
+
+.content {
+  padding: 40px;
+  
+  .title {
+    padding: 20px 0 50px 0;
+  }
+}

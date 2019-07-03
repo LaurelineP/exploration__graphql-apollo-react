@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
 import ApolloClient, { gql } from "apollo-boost";
 import { ApolloProvider } from 'react-apollo';
+
+import "./styles/index.scss";
 
 /** 1. Setting the client */
 const client = new ApolloClient({
