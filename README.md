@@ -10,3 +10,5 @@ Testing Apollo with graphQL
 2. ApolloProvider: component wraping your application to set the context of your app  
     allowing to connect your application with your apollo-client
 3. Query: a react-component using render props to share GraphQL data
+-   when using dynamic values we need to restructure the static query to allow to use  
+variables props
