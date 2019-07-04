@@ -9,7 +9,7 @@ import { gql } from 'apollo-boost';
  * 
  */
 export const QueryCurrency = () => {
-	const query = {
+	const queryProps = {
 		query: gql `
 		{
 			rates ( currency : "USD" ){
@@ -20,7 +20,7 @@ export const QueryCurrency = () => {
 		`
 	}
 	return (
-		<Query {...query }>
+		<Query {...queryProps }>
 			{
 				({ loading, error, data }) => {
 					if( loading ) return <p>Loading...</p>;

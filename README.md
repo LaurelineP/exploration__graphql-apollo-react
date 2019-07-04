@@ -9,6 +9,11 @@ Testing Apollo with graphQL
 1. Apollo-client: helps setting your queries environments ( so to say )
 2. ApolloProvider: component wraping your application to set the context of your app  
     allowing to connect your application with your apollo-client
-3. Query: a react-component using render props to share GraphQL data
+3. Query: a react-component using render props to share GraphQL data ( DOGS )
 -   when using dynamic values we need to restructure the static query to allow to use  
 variables props
+4. Mutation: meant for : ( TODOS )
+- creating
+- updating
+- deleting
+( all kind of data's mutations )

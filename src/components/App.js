@@ -5,12 +5,13 @@ import { ApolloProvider } from 'react-apollo';
 
 /* Content components */
 import CurrencyContent from './CurrencyContent';
-import DogContent from './DogContent';
+import DogsContent from './DogContent';
+import TodosContent from './TodosContent';
 
 
 import '../styles/App.scss';
 
-/** 1. Setting the client */
+/** 1. Setting the client according to which nav element it is*/
 const setApolloClient = ( menuItem ) => {
 	const details = () => {
 		switch ( menuItem ) {
@@ -19,7 +20,7 @@ const setApolloClient = ( menuItem ) => {
 			case "dogs":
 				return "https://dog-graphql-api.glitch.me";
 			default:
-				break;
+				return "not good path";
 		}
 	}
 	const client = new ApolloClient({ uri: () => details() });
@@ -29,14 +30,16 @@ const setApolloClient = ( menuItem ) => {
 };
 
 const App = () => {
-	const [ activeMenuItem, setActiveMenuItem ] = useState('currency');
-	const navLabels = [ 'currency', 'dogs' ];
+	const navLabels = [ 'currency', 'dogs', 'todos' ];
+	const [ activeMenuItem, setActiveMenuItem ] = useState(navLabels[navLabels.length - 1]);
 	const getContent = menuItem => {
 		switch( menuItem ){
 			case 'currency':
 				return <CurrencyContent />
 			case 'dogs':
-				return <DogContent />;
+				return <DogsContent />;
+			case 'todos':
+				return <TodosContent />;
 			default:
 				return <p>error</p>;
 		}
