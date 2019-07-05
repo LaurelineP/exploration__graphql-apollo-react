@@ -17,3 +17,13 @@ variables props
 - updating
 - deleting
 ( all kind of data's mutations )
+
+### Updating the cache 
+Somethime when you come to update ypour graphql you may lose the sync  
+with your cache ( happens when data you want to update is already in the cache ; f. delete and creating todos to a list )  
+- Update list with cache with **update** function to provide within <Mutation />
+    - ```cache.readQuery``` : read query
+    - ```cache.writeQuery```: write query
+    - ```cache.readFragment```: allows you to read data from any node you have queried.
+    - ```cache.writeFragment```
+    - ```cache.writeData```
